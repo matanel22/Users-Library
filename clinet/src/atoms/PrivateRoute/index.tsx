@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
-import { useQueryClient } from "react-query";
+
 // import { Redirect, Route } from "react-router";
-import { useRecoilValue } from "recoil";
 
 interface IProps {
   children: ReactNode;

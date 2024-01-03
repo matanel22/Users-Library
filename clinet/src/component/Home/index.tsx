@@ -10,7 +10,7 @@ import { AddUser, Button } from "../addUser";
 import styled from "styled-components";
 import { v4 as uuidv4 } from "uuid";
 import { UpdateUser } from "../UpdateUser.tsx";
-import Plus from "../../SVG/plus.svg";
+
 export interface MyData {
   title: string;
   firstName: string;
@@ -65,7 +65,7 @@ export const Home = () => {
           setIsOpenModalNewUser(true);
         }}
       >
-        הוספת משתמש
+        add user
       </Button>
       <HomeWrapper>
         <CardsWrapperOne>

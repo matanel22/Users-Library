@@ -9,9 +9,7 @@ interface IProps {
 export const Header = ({ plus, nameFile }: IProps) => {
   return (
     <>
-      <HeaderWarper>
-        <SearchField />
-      </HeaderWarper>
+      <HeaderWarper>{"Welcome to the user directory"}</HeaderWarper>
     </>
   );
 };

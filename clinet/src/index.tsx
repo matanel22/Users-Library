@@ -5,19 +5,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RecoilRoot } from "recoil";
-import { QueryClient, QueryClientProvider } from "react-query";
-
-const queryClient = new QueryClient();
 
 ReactDOM.render(
   <React.StrictMode>
     <RecoilRoot>
-      <QueryClientProvider client={queryClient}>
-        {/* <Suspense fallback={<Loading />}> */}
-        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
-        <App />
-        {/* </Suspense> */}
-      </QueryClientProvider>
+      {/* <Suspense fallback={<Loading />}> */}
+      {/* <ReactQueryDevtools initialIsOpen={false} /> */}
+      <App />
+      {/* </Suspense> */}
     </RecoilRoot>
   </React.StrictMode>,
   document.getElementById("root")
