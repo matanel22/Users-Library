@@ -6,10 +6,11 @@ import json from "../../Results/Results.json";
 import { HomeWrapper, Param, SafetyHeader } from "./StyleToPage/StyleToHome";
 import { CardsWrapperOne } from "./StyleToPage/StyleIndex";
 import { Card } from "../../atoms/Card";
-import { AddUser } from "../addUser";
+import { AddUser, Button } from "../addUser";
 import styled from "styled-components";
 import { v4 as uuidv4 } from "uuid";
 import { UpdateUser } from "../UpdateUser.tsx";
+import Plus from "../../SVG/plus.svg";
 export interface MyData {
   title: string;
   firstName: string;
@@ -59,6 +60,13 @@ export const Home = () => {
 
   return (
     <DefaultContainer background search nameFile={""}>
+      <Button
+        onClick={() => {
+          setIsOpenModalNewUser(true);
+        }}
+      >
+        הוספת משתמש
+      </Button>
       <HomeWrapper>
         <CardsWrapperOne>
           {jsonData &&
@@ -102,3 +110,5 @@ export const Home = () => {
     </DefaultContainer>
   );
 };
+
+const NewUser = styled.img``;

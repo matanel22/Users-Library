@@ -4,15 +4,10 @@ import { useRecoilValue } from "recoil";
 import styled from "styled-components";
 
 import { DefaultContainer } from "../../containers/DefaultContainer";
-import { newSearch, searchWord } from "../../store/search";
-import { userInfo } from "../../store/userInfo";
 
 import { SearchField } from "./SearchField";
 
 export const Search = () => {
-  const user = useRecoilValue(userInfo);
-  const searchTerm = useRecoilValue(searchWord);
-  const canSearch = useRecoilValue(newSearch);
   const [isSearched, setIsSearched] = useState(false);
   const [canFetch, setCanFetch] = useState(false);
   const [file, setFile] = useState<string>("");

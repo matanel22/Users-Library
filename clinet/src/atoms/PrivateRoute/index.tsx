@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 import { useQueryClient } from "react-query";
 // import { Redirect, Route } from "react-router";
 import { useRecoilValue } from "recoil";
-import { userInfo } from "../../store/userInfo";
 
 interface IProps {
   children: ReactNode;
@@ -11,8 +10,6 @@ interface IProps {
 }
 
 export const PrivateRoute = ({ children, ...rest }: IProps) => {
-  const user = useRecoilValue(userInfo);
-
   return (
     <></>
     //   <Route
