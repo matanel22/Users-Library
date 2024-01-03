@@ -9,19 +9,19 @@ export interface IProps {
   id: string;
   country: string;
   city: string;
-  street: { name: string; value: string };
+  street: string;
   Icon?: string;
   bgColor?: string;
   isActive: boolean;
   emeil: string;
   textSize?: Number;
+  onClickFunc?: () => void;
 }
 export interface DivIconProps {
   color?: string;
 }
 export interface CardProps {
   color?: string;
-
   isActive: boolean;
 }
 export const Card = ({
@@ -36,26 +36,19 @@ export const Card = ({
   emeil,
   isActive,
   Icon,
-
+  onClickFunc,
   textSize,
 }: IProps) => {
   return (
     <CardWrapper
-      // onClick={() => {
-      //   isActive && onClickFunc && onClickFunc();
-      // }}
+      onClick={() => {
+        isActive && onClickFunc && onClickFunc();
+      }}
       color={color}
       isActive={isActive}
       className={isActive ? "" : "active"}
     >
-      {Icon && (
-        <ImgUser src={Icon} />
-        // <DivAllIcon color={color}>
-        //   <DivIcon color={color}></DivIcon>
-
-        //   <Icon id={text} />
-        // </DivAllIcon>
-      )}
+      {Icon && <ImgUser src={Icon} />}
       <p
         style={{
           margin: "0",
@@ -79,9 +72,9 @@ export const Card = ({
         <br />
         {city}
         <br />
-        {street.name}
+        {street}
         <br />
-        {street.value}
+        {/* {street.value} */}
       </p>
     </CardWrapper>
   );

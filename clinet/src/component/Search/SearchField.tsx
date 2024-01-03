@@ -5,24 +5,6 @@ import { useState } from "react";
 export const SearchField = () => {
   const [lastSearch, setLastSearch] = useState(false);
   const [arrLstSearch, setArrLstSearch] = useState<Array<string>>([]);
-  // const [searchTerm, setSearchTerm] = useRecoilState(searchWord);
-  // const [isSearch, setIsSearch] = useRecoilState(newSearch);
-  // const [Loctionpath, setLoctionPath] = useRecoilState(loctionPath);
-
-  // function handleChange(e: any) {
-  //   setSearchTerm(e.target.value);
-  // }
-
-  // const handleSearch = () => {
-  //   if (searchTerm) {
-  //     history.push("/search");
-  //     setIsSearch(true);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   setIsSearch(false);
-  // }, [searchTerm]);
 
   return (
     <div>
@@ -34,20 +16,7 @@ export const SearchField = () => {
               // handleSearch();
             }}
           >
-            {/* {searchTerm && (
-              <div
-                style={{ color: "#D1D3D5" }}
-                onClick={() => {
-                  setSearchTerm("");
-                  setLastSearch(false);
-                }}
-              >
-                <IoCloseCircle />
-              </div>
-            )} */}
             <input
-              // onChange={(e) => handleChange(e)}
-              // value={searchTerm}
               onClick={() => {
                 setLastSearch(true);
               }}
@@ -58,14 +27,7 @@ export const SearchField = () => {
               }}
             />
 
-            <button
-              type="submit"
-              onClick={() => {
-                // handleSearch();
-              }}
-            >
-              {/* <Magnifier /> */}
-            </button>
+            <button type="submit" onClick={() => {}}></button>
           </form>
         </SearchFieldWarper>
       </SearchWarper>
@@ -94,6 +56,7 @@ export const SearchField = () => {
 const SearchFieldWarper = styled.div`
   width: 90%;
   margin-right: 0.5rem;
+
   form {
     display: flex;
     border-radius: 1rem;
@@ -123,6 +86,6 @@ const SearchWarper = styled.div`
   display: flex;
   width: 100%;
   margin-top: 1rem;
-
+  border-radius: 30px;
   align-items: center;
 `;

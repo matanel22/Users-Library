@@ -27,7 +27,7 @@ export const DefaultContainer = ({
 };
 
 const AppWrapper = styled.div<IProps>`
-  direction: rtl;
+  // direction: rtl;
   background: ${(props: IProps) => props.background === true && `#F6F8FB`};
   overflow: ${(props) => props.overflow};
   background-size: cover;
